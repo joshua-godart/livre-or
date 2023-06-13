@@ -38,9 +38,9 @@ if(isset($_POST['form_connexion'])){
     <title>Connexion</title>
 </head>
 <body>
-    <!-- <video class="video-arriere-plan" autoplay muted loop>
+    <video class="video-arriere-plan" autoplay muted loop>
             <source src="img/diablo.mp4" type="video/mp4">
-    </video> -->
+    </video>
     <div class="formulaire">
         <div>
             <h2>Connexion</h2>

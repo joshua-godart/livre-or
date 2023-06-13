@@ -1,57 +1,54 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
-    <title>Commentaires</title>
+    <link rel="stylesheet" href="livre-or.css">
+    <title>Livre d'or</title>
 </head>
 <body>
     <header>
-        <h2>Commentaires</h2>
-        <div class="button">
-            <a href="deconnexion.php">Déconnexion</a>
-        </div>
+        <?php
+        $bdd = new PDO('mysql:host=localhost;dbname=livreor', 'root', 'admin');
+
+        if(isset($_SESSION['id'])){
+            $requser = $bdd->prepare("SELECT * FROM utilisateurs WHERE id = ?");
+            $requser->execute(array($_SESSION['id']));
+            $user = $requser->fetch();
+            // echo $user['id'];
+            echo "<a href=\"commentaire.php\">Ajouter un commentaire</a><br>";
+            echo "<a href=\"deconnexion.php\">Déconnexion</a>";
+        }
+        ?>
     </header>
     <main>
-        <div class="bloc_tab">
+        <section class="livre_or">
+            <!-- <h2>Commentaires</h2> -->
             <div class="tableau">
+                <h2>Commentaires</h2>
+                <!-- <div><a class="com" href="commentaire.php">Ajouter un commentaire</a></div> -->
                 <?php
-                $serveur = 'localhost';
-                $nomUtilisateur = 'root';
-                $motDePasse = 'admin';
-                $nomBaseDeDonnees = 'livreor';
-
 
                 try {
                     // Connexion à la base de données avec PDO
-                    $bdd = new PDO("mysql:host=$serveur;dbname=$nomBaseDeDonnees;charset=utf8", $nomUtilisateur, $motDePasse);
+                    $bdd = new PDO("mysql:host=localhost;dbname=livreor", 'root', 'admin');
 
                     // Requête SQL pour récupérer les informations de la table étudiants
                     $requete = "SELECT commentaires.commentaire, utilisateurs.login, commentaires.date FROM utilisateurs JOIN commentaires ON commentaires.id_utilisateur = utilisateurs.id";
                     $resultat = $bdd->query($requete);
-                // Affichage du résultat dans un tableau HTML
-                    echo "<table>";
-                    echo "<table border='1'>";
-                    echo "<thead>";
-                    echo "<tr>";
-                    echo "<th>Commentaire</th>";
-                    echo "<th>Login</th>";
-                    echo "<th>Date</th>";
-                    echo "</tr>";
-                    echo "</thead>";
-                    echo "<tbody>";
 
                     while ($ligne = $resultat->fetch(PDO::FETCH_ASSOC)) {
-                        echo "<tr>";
-                        echo "<td>" . $ligne['commentaire'] . "</td>";
-                        echo "<td>" . $ligne['login'] . "</td>";
-                        echo "<td>" . $ligne['date'] . "</td>";
-                        echo "</tr>";
+                        echo "<div class='bloc_login'>";
+                        echo "<div class='login'>"."Ecrit par " . $ligne['login'] . "<br>"."</div>";
+                        echo "<div class='date'>"." le " . $ligne['date'] . "<br>"."</div>";
+                        echo "</div>";
+                        echo "<div class='comment'>" . $ligne['commentaire'] . "<br>"."</div>";
                     }
-                    echo "</tbody>";
-                    echo "</table>";
 
                     // Fermeture de la connexion à la base de données
                     $resultat->closeCursor();
@@ -62,7 +59,7 @@
                 }
                 ?>
             </div>
-        </div>
+        </section>
     </main>
 </body>
 </html>

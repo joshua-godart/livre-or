@@ -1,0 +1,87 @@
+@font-face {
+  font-family: diablo_light;
+  src: url(font/Diablo_Light.ttf);
+}
+@font-face {
+  font-family: diablo_heavy;
+  src: url(font/Diablo_Heavy.ttf);
+}
+body{
+    background-image: url(img/open_hellgate.jpg);
+    /* width: 100vw;
+    height: 100vh; */
+    /* display: flex;
+    justify-content: center; */
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-color: #181717; */
+    margin: 0;
+}
+header{
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    background-color: #181717ad;
+}
+a{
+    text-decoration: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #fff;
+}
+.button:hover a{
+    color: rgb(154, 4, 4);
+    transition: 0.3s;
+}
+main{
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+}
+/* .container{
+    overflow: hidden;
+} */
+div.formulaire{
+    margin: 20vh;
+    background-color: #1817179c;
+    /* background-color: rgba(79, 29, 2, 0.579); */
+    /* background-color: rgba(255,255,255,0.2); */
+    padding: 15px;
+    color: #ffffffb1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 40vh;
+    border-radius: 10px;
+    /* opacity: 0.2; */
+    /* font-family: diablo_light; */
+}
+h2{
+    font-family: diablo_heavy;
+    font-size: 30px;
+}
+.formulaire{
+    position: relative;
+    z-index: 1;
+}
+input[type=submit]{
+    color: #ffffffb1;
+    background-color: #1817179c;
+    padding: 5px;
+    width: 100%;
+}
+input[type=text]{
+    background-color: #1817179c;
+    color: #fff;
+}
+input[type=password]{
+    background-color: #1817179c;
+    color: #fff;
+}
+label{
+    display: flex;
+    text-align: right;
+    border-bottom: 1px solid #ffffffb1;
+}

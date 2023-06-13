@@ -31,13 +31,13 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
                         <a class="edit" href="edit_profil.php">Editer mon profil</a>
                     </div>
                     <div>
-                        <a class="deco" href="deconnexion.php">Déconnexion</a>
-                    </div>
-                    <div>
                         <a class="com" href="commentaire.php">Ajouter un commentaire</a>
                     </div>
                     <div>
-                        <a class="com" href="livre-orbis.php">Livre d'or</a>
+                        <a class="gold" href="livre-or.php">Livre d'or</a>
+                    </div>
+                    <div>
+                        <a class="deco" href="deconnexion.php">Déconnexion</a>
                     </div>
                 </div>
                 <?php

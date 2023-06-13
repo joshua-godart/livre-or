@@ -42,9 +42,9 @@ if(isset($_POST['form_inscription'])){
 </head>
 <body>
     <section class="container">
-        <!-- <video class="video-arriere-plan" autoplay muted loop>
+        <video class="video-arriere-plan" autoplay muted loop>
             <source src="img/diablo.mp4" type="video/mp4">
-        </video> -->
+        </video>
         <div class="formulaire" id="content">
             <div>
                 <h2>Inscription</h2>

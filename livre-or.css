@@ -1,3 +1,15 @@
-.login{
+.livre_or{
+    width: 100vw;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.date{
+    padding-left: 3px;
+}
+.bloc_login{
+    display: flex;
     background-color: yellow;
 }

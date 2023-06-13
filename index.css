@@ -1,0 +1,54 @@
+@font-face {
+  font-family: diablo_light;
+  src: url(font/Diablo_Light.ttf);
+}
+@font-face {
+  font-family: diablo_heavy;
+  src: url(font/Diablo_Heavy.ttf);
+}
+body{
+    background-image: url(img/hellgate.jpg);
+    background-size: cover;
+}
+section{
+    /* width: 50%; */
+    /* background-color: yellow; */
+    /* height: 90vh; */
+    margin-top: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+main{
+    display: flex;
+    justify-content: space-around;
+}
+div.button_1{
+    /* width: 10vw; */
+    border: 1px solid #fff;
+    padding: 15px;
+    background-color: #0b0b0b;
+}
+div.button_2{
+    /* width: 10vw; */
+    border: 1px solid #fff;
+    padding: 15px;
+    background-color: #0b0b0b;
+}
+a{
+    text-decoration: none;
+    font-family: diablo_light;
+    font-size: 20px;
+    color: #fff;
+    padding: 15px;
+}
+section.inscription:hover div.button_1{
+    background-image: url(img/fire.gif);
+    background-size: cover;
+    transition: 0.5s;
+}
+section.connexion:hover div.button_2{
+    background-image: url(img/fire.gif);
+    background-size: cover;
+    transition: 0.5s;
+}

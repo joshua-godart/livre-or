@@ -21,7 +21,7 @@
             </div>
         </section>
         <div>
-            <a href="livre-orbis.php">Livre d'or</a>
+            <a href="livre-or.php">Livre d'or</a>
         </div>
     </main>
     <footer></footer>
