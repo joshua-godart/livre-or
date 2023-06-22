@@ -43,58 +43,70 @@ if(isset($_SESSION['id'])){
 </head>
 <body>
     <header>
-        <div class="button">
-            <a class="deco" href="deconnexion.php">Déconnexion</a>
+        <div class="logo">
+            <a href="index.php"><img src="img/logo.png" alt=""></a>
+            <h1>Comics Store</h1>
+        </div>
+        <div class="user">
+            <?php
+                if(isset($_SESSION['id']) && $user['id'] == $_SESSION['id']){
+            ?>
+            <div class="buttons">
+                <div class="button">
+                    <a href="index.php">Acceuil</a>
+                </div>
+                <div class="button">
+                    <a href="livre-or.php">Livre d'or</a>
+                </div>
+                <div class="button">
+                    <a href="<?php ("Location:profil.php?id=".$_SESSION['id']);?>"><?php echo $user['login']?></a>
+                </div>
+                <div class="button">
+                    <a class="deco" href="deconnexion.php">Déconnexion</a>
+                </div>
+            </div>
+            <?php
+                }
+            ?>
         </div>
     </header>
     <main>
-        <div class="formulaire">
-            <div>
-                <h2>Edition du profil</h2>
-            </div>
-            <div>
-                <form action="" method="post">
-                <table>
-                    <tr>
-                        <td>
+        <section class="image">
+                <img src="img/profile_image2.png" alt="">
+        </section>
+        <section class="form">
+            <div class="formulaire">
+                <div>
+                    <h2>Edition du profil</h2>
+                </div>
+                <div>
+                    <form action="" method="post">
+                    <div class="table">
+                        <div class="label">
                             <label for="new_login">Nouveau Login : </label>
-                        </td>
-                        <td>
                             <input type="text" name="new_login" id="new_login" placeholder="Nouveau login" value="<?php echo $user['login'];?>">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
+                        </div>
+                        <div class="label">
                             <label for="new_password">Nouveau Mot de passe : </label>
-                        </td>
-                        <td>
                             <input type="password" name="new_password" id="new_password" placeholder="Nouveau Mot de passe">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
+                        </div>
+                        <div class="label">
                             <label for="new_password_conf">Confirmer mot de passe : </label>
-                        </td>
-                        <td>
                             <input type="password" name="new_password_conf" id="new_password_conf" placeholder="Confirme mot de passe">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                        </td>
-                        <td>
+                        </div>
+                        <div class="valider">
                             <input type="submit" name="form_inscription" value="Valider">
-                        </td>
-                    </tr>
-                </table>
-            </form>
-        </div>
-        <?php
-        if(isset($message)){
-            echo $message;
-        }
-        ?>
-        </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <?php
+            if(isset($message)){
+                echo $message;
+            }
+            ?>
+            </div>
+        </section>
     </main>
 </body>
 </html>

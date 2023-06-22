@@ -1,87 +1,133 @@
 @font-face {
-  font-family: diablo_light;
-  src: url(font/Diablo_Light.ttf);
+  font-family: corner;
+  src: url(font/KGCorneroftheSky.ttf);
 }
 @font-face {
-  font-family: diablo_heavy;
-  src: url(font/Diablo_Heavy.ttf);
+  font-family: action_comics_black;
+  src: url(font/Action\ Comics\ Black.ttf);
 }
 body{
-    background-image: url(img/open_hellgate.jpg);
-    /* width: 100vw;
-    height: 100vh; */
-    /* display: flex;
-    justify-content: center; */
-    background-size: cover;
-    font-family: Arial, Helvetica, sans-serif;
-    /* background-color: #181717; */
     margin: 0;
+    padding: 0;
+    /* background-color: #2b57bd; */
+    background-image: url(img/strips.jpg);
 }
 header{
+    background-color: #c31a1a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h1{
+    color: #fff;
+    font-family: corner;
+    font-size: 30px;
+    padding-left: 15px;
+    text-transform: uppercase;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 100px;
+}
+.buttons{
+    padding-top: 5px;
     display: flex;
     justify-content: flex-end;
-    padding: 20px;
-    background-color: #181717ad;
 }
-a{
+.button a{
     text-decoration: none;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
     padding-left: 15px;
     padding-right: 15px;
-    color: #fff;
+    border-right: 1px solid #fff;
 }
 .button:hover a{
-    color: rgb(154, 4, 4);
+    color: #000;
+    /* background-color: #fff;
+    border-radius: 15px; */
     transition: 0.3s;
+}
+.button .connect{
+    border: 0;
 }
 main{
     display: flex;
     justify-content: center;
-    background-size: cover;
+    padding-top: 20px;
+    background-color: #ffffff84;
 }
-/* .container{
-    overflow: hidden;
-} */
-div.formulaire{
-    margin: 20vh;
-    background-color: #1817179c;
-    /* background-color: rgba(79, 29, 2, 0.579); */
-    /* background-color: rgba(255,255,255,0.2); */
+.image{
+    height: 80vh;
+    padding: 3vw;
+    /* width: 500px; */
+    background-color: #c31a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image img{
+    width: 25vw;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    padding: 3vw;
+    width: 25vw;
+    background-color: #c31a1a;
+}
+.formulaire{
+    background-color: #fff;
+    width: 350px;
+    /* height: 450px; */
+    border-radius: 15px;
     padding: 15px;
-    color: #ffffffb1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    background-color: #ac1818;
+}
+.label{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    width: 30vw;
-    height: 40vh;
-    border-radius: 10px;
-    /* opacity: 0.2; */
-    /* font-family: diablo_light; */
-}
-h2{
-    font-family: diablo_heavy;
-    font-size: 30px;
-}
-.formulaire{
-    position: relative;
-    z-index: 1;
-}
-input[type=submit]{
-    color: #ffffffb1;
-    background-color: #1817179c;
-    padding: 5px;
-    width: 100%;
-}
-input[type=text]{
-    background-color: #1817179c;
-    color: #fff;
-}
-input[type=password]{
-    background-color: #1817179c;
-    color: #fff;
 }
 label{
-    display: flex;
-    text-align: right;
-    border-bottom: 1px solid #ffffffb1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+input[type=text]{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 15px;
+    text-indent: 15px;
+    border: none;
+}
+input[type=submit]{
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    border-radius: 15px;
+    background-color: #fff;
+    /* border: none; */
+    font-size: 20px;
+}
+input[type=password]{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 15px;
+    text-indent: 15px;
+    border: none;
+}
+.valider{
+    padding-bottom: 10px;
 }

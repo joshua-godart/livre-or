@@ -38,59 +38,71 @@ if(isset($_POST['form_connexion'])){
     <title>Connexion</title>
 </head>
 <body>
-    <video class="video-arriere-plan" autoplay muted loop>
-            <source src="img/diablo.mp4" type="video/mp4">
-    </video>
-    <div class="formulaire">
-        <div>
-            <h2>Connexion</h2>
+    <header>
+        <div class="logo">
+            <a href="index.php"><img src="img/logo.png" alt=""></a>
+            <h1>Comics Store</h1>
         </div>
-        <div>
-            <form action="" method="post">
-                <table>
-                    <tr>
-                        <td>
-                            <label for="login">Login : </label>
-                        </td>
-                        <td>
-                            <input type="text" name="login_connect" id="login" placeholder="Login">
-                        </td>
-                    </tr>
-                    <tr>
-                    <tr>
-                        <td>
-                            <label for="password">Mot de passe : </label>
-                        </td>
-                        <td>
-                            <input type="password" name="password_connect" id="password" placeholder="Mot de passe">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                        </td>
-                        <td>
-                            <input type="submit" name="form_connexion" value="Valider">
-                        </td>
-                    </tr>
-                </table>
-            </form>
-        </div>
-        <div class="deja">
-                <div>
-                    <div>Pas encore de compte ?</div>
-                </div>
-                <div>
-                    <a href="inscription.php">inscription</a>
-                </div>
+        <div class="buttons">
+            <div class="button">
+                <a href="index.php">Acceuil</a>
             </div>
-        <?php
-        if(isset($message)){
-            echo$message;
-        }
-        ?>
-        <!-- <div>
-            <a href="connexion.php">connexion</a>
-        </div> -->
-    </div>
+            <div class="button">
+                <a href="livre-or.php">Livre d'or</a>
+            </div>
+            <div class="button">
+                <a href="inscription_bis.php">Inscription</a>
+            </div>
+            <div class="button">
+                <a class="connect" href="connexion.php">Connexion</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="image">
+            <img src="img/spider-man-2099.png" alt="" width="400px">
+        </section>
+        <section class="form">
+            <div class="formulaire">
+                <div>
+                    <h2>Connexion</h2>
+                </div>
+                <div>
+                    <form action="" method="post">
+                        <div class="table">
+                            <div class="label">
+                                <label for="login">Login : </label>
+                                <input type="text" name="login_connect" id="login" placeholder="Login">
+                            </div>
+                            <div class="label">
+                                <label for="password">Mot de passe : </label>
+                                <input type="password" name="password_connect" id="password" placeholder="Mot de passe">
+                            </div>
+                            <div class="valider">
+                                <input type="submit" name="form_connexion" value="Valider">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="deja">
+                        <div>
+                            <div>Pas encore de compte ?</div>
+                        </div>
+                        <div>
+                            <a href="inscription_bis.php">inscription</a>
+                        </div>
+                    </div>
+                <?php
+                if(isset($message)){
+                    echo$message;
+                }
+                ?>
+                <!-- <div>
+                    <a href="connexion.php">connexion</a>
+                </div> -->
+            </div>
+        </section>
+    </main>
+    <footer></footer>
 </body>
 </html>

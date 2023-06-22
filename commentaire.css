@@ -1,0 +1,94 @@
+@font-face {
+  font-family: corner;
+  src: url(font/KGCorneroftheSky.ttf);
+}
+@font-face {
+  font-family: action_comics_black;
+  src: url(font/Action\ Comics\ Black.ttf);
+}
+body{
+    margin: 0;
+    padding: 0;
+    /* background-color: #2b57bd; */
+    background-image: url(img/strips.jpg);
+}
+main{
+    background-color: #ffffff84;
+    height: 100%;
+}
+header{
+    background-color: #c31a1a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h1{
+    color: #fff;
+    font-family: corner;
+    font-size: 30px;
+    padding-left: 15px;
+    text-transform: uppercase;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 100px;
+}
+.buttons{
+    padding-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+.button a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-right: 1px solid #fff;
+}
+.button:hover a{
+    color: #000;
+    background-color: #fff;
+    transition: 0.3s;
+}
+.button .deco{
+    border: 0;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.comment{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 40vw;
+    background-color: #c31a1a;
+}
+.bloc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+textarea{
+    width: 30vw;
+    border-radius: 15px;
+    text-indent: 10px;
+    border: none;
+}
+input[type=submit]{
+    width: 100%;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #fff;
+    font-size: 20px;
+}

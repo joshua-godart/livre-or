@@ -21,22 +21,25 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
     </head>
     <body>
         <header>
+            <div class="logo">
+                <a href="index.php"><img src="img/logo.png" alt=""></a>
+                <h1>Comics Store</h1>
+            </div>
             <div class="user">
-                <h2>Profil de <?php echo $userinfos['login']?></h2>
                 <?php
                 if(isset($_SESSION['id']) && $userinfos['id'] == $_SESSION['id']){
                 ?>
-                <div class="button">
-                    <div>
+                <div class="buttons">
+                    <div class="button">
                         <a class="edit" href="edit_profil.php">Editer mon profil</a>
                     </div>
-                    <div>
+                    <div class="button">
                         <a class="com" href="commentaire.php">Ajouter un commentaire</a>
                     </div>
-                    <div>
+                    <div class="button">
                         <a class="gold" href="livre-or.php">Livre d'or</a>
                     </div>
-                    <div>
+                    <div class="button">
                         <a class="deco" href="deconnexion.php">Déconnexion</a>
                     </div>
                 </div>
@@ -48,7 +51,16 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
                 </div> -->
             </div>
         </header>
-        <main></main>
+        <main>
+            <section class="image">
+                <img src="img/profile_image2.png" alt="">
+            </section>
+            <section class="content">
+                <div>
+                    <h2>Profil de <?php echo $userinfos['login']?></h2>
+                </div>
+            </section>
+        </main>
         <footer></footer>
     </body>
     </html>

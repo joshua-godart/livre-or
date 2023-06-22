@@ -1,44 +1,83 @@
 @font-face {
-  font-family: diablo_light;
-  src: url(font/Diablo_Light.ttf);
+  font-family: corner;
+  src: url(font/KGCorneroftheSky.ttf);
 }
 @font-face {
-  font-family: diablo_heavy;
-  src: url(font/Diablo_Heavy.ttf);
+  font-family: action_comics_black;
+  src: url(font/Action\ Comics\ Black.ttf);
 }
 body{
-    background-color: #181717;
-    background-image: url(img/open_hellgate.jpg);
-    background-size: cover;
-    /* backdrop-filter: blur(8px); */
     margin: 0;
+    padding: 0;
+    /* background-color: #2b57bd; */
+    background-image: url(img/strips.jpg);
 }
-h2{
-    color: #fff;
-    font-family: diablo_light;
-    padding-left: 5vw;
-}
-.user{
+header{
+    background-color: #c31a1a;
     display: flex;
     justify-content: space-between;
-    background-color: #181717ad;
     align-items: center;
 }
-.button{
-    display: flex;
+h1{
+    color: #fff;
+    font-family: corner;
+    font-size: 30px;
+    padding-left: 15px;
+    text-transform: uppercase;
 }
-a{
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 100px;
+}
+.buttons{
+    padding-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+.button a{
     text-decoration: none;
     color: #fff;
-    padding-right: 15px;
-    padding-left: 15px;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding-left: 15px;
+    padding-right: 15px;
     border-right: 1px solid #fff;
 }
-.deco{
+.button:hover a{
+    color: #000;
+    transition: 0.3s;
+}
+.button .deco{
     border: 0;
 }
-.button div:hover a{
-    color: rgb(154, 4, 4);
-    transition: 0.3s;
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff84;
+}
+.image{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    padding: 3vw;
+    background-color: #c31a1a;
+    /* width: 30vw; */
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image img{
+    width: 25vw;
+}
+.content{
+    background-color: #c31a1a;
+    height: 80vh;
+    padding: 3vw;
+    width: 25vw;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
 }

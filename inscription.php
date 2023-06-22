@@ -41,10 +41,6 @@ if(isset($_POST['form_inscription'])){
     <title>Inscription</title>
 </head>
 <body>
-    <section class="container">
-        <video class="video-arriere-plan" autoplay muted loop>
-            <source src="img/diablo.mp4" type="video/mp4">
-        </video>
         <div class="formulaire" id="content">
             <div>
                 <h2>Inscription</h2>
@@ -103,6 +99,5 @@ if(isset($_POST['form_inscription'])){
                 <a href="connexion.php">connexion</a>
             </div> -->
         </div>
-    </section>
 </body>
 </html>

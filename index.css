@@ -1,54 +1,119 @@
 @font-face {
-  font-family: diablo_light;
-  src: url(font/Diablo_Light.ttf);
+  font-family: corner;
+  src: url(font/KGCorneroftheSky.ttf);
 }
 @font-face {
-  font-family: diablo_heavy;
-  src: url(font/Diablo_Heavy.ttf);
+  font-family: action_comics_black;
+  src: url(font/Action\ Comics\ Black.ttf);
 }
 body{
-    background-image: url(img/hellgate.jpg);
-    background-size: cover;
-}
-section{
-    /* width: 50%; */
-    /* background-color: yellow; */
-    /* height: 90vh; */
-    margin-top: 30vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin: 0;
+    padding: 0;
+    /* background-color: #2b57bd; */
+    background-image: url(img/strips.jpg);
 }
 main{
+    background-color: #ffffff84;
+    height: 100%;
+}
+header{
+    background-color: #c31a1a;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
 }
-div.button_1{
-    /* width: 10vw; */
-    border: 1px solid #fff;
-    padding: 15px;
-    background-color: #0b0b0b;
-}
-div.button_2{
-    /* width: 10vw; */
-    border: 1px solid #fff;
-    padding: 15px;
-    background-color: #0b0b0b;
-}
-a{
-    text-decoration: none;
-    font-family: diablo_light;
-    font-size: 20px;
+h1{
     color: #fff;
-    padding: 15px;
+    font-family: corner;
+    font-size: 30px;
+    padding-left: 15px;
+    text-transform: uppercase;
 }
-section.inscription:hover div.button_1{
-    background-image: url(img/fire.gif);
-    background-size: cover;
-    transition: 0.5s;
+.logo{
+    display: flex;
 }
-section.connexion:hover div.button_2{
-    background-image: url(img/fire.gif);
-    background-size: cover;
-    transition: 0.5s;
+.logo img{
+    width: 100px;
+}
+.buttons{
+    padding-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+.button a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-right: 1px solid #fff;
+}
+.button:hover a{
+    color: #000;
+    transition: 0.3s;
+}
+.button .connect{
+    border: 0;
+}
+.image{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+.image img{
+    width: 60%;
+    border: 2px solid #000;
+}
+h2{
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+.sortie{
+    background-color: #a51616;
+    /* margin-bottom: 20px; */
+}
+.sliders{
+    display: block;
+    /* width: 100%; */
+    overflow-x: scroll;
+    /* scrollbar-color: #a51616; */
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    /* overflow: hidden; */
+}
+.sliders::-webkit-scrollbar{
+    width: 10px;
+}
+.sliders::-webkit-scrollbar-thumb{
+    background-color: #a51616;
+}
+.slider_container{
+    display: block;
+    white-space: nowrap;
+}
+.items{
+    display: inline-block;
+    margin-right: 10px;
+}
+.items img{
+    width: 20vw;
+    /* border: 1px solid #fff; */
+}
+footer{
+    background-color: #171616;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* margin-top: 20px; */
+}
+.logo img{
+    width: 70px;
+    padding: 5px;
 }
